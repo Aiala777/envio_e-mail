@@ -8,11 +8,10 @@ from email.mime.image import MIMEImage
 
 def envio():
     # email details
-    sender = 'atendimentoeficaz@eficazcob.com.br'
-    recipient = 'equipecpd@eficazcob.com.br'
+    sender = ''
+    recipient = ''
     subject = 'Subject line of the email'
     body = """Olá, Bom dia!
-CHIPEIRAS REBOOTADAS!!!!!.
     <br>  <br> 
 
     <span style="font-size: 15px;">Atenciosamente,</span> <br>
@@ -24,14 +23,14 @@ CHIPEIRAS REBOOTADAS!!!!!.
 
     image_path = 'C:/Users/Administrator/Desktop/Chipeiras/assinatura.png'
     # attachment details
-    attachment_path = r"C:/Users/Administrator/Desktop/Chipeiras/ok.jpg"
+    attachment_path = r""
     attachment_name = 'ok.jpg'
 
     # create a MIME message object
     msg = MIMEMultipart()
-    msg['From'] = 'atendimentoeficaz@eficazcob.com.br'
-    msg['To'] = 'equipecpd@eficazcob.com.br'
-    msg['Subject'] = 'Aviso Chipeiras'
+    msg['From'] = ''
+    msg['To'] = ''
+    msg['Subject'] = ''
     msg.attach(MIMEText(body, 'html'))
     
 
@@ -51,8 +50,8 @@ CHIPEIRAS REBOOTADAS!!!!!.
     # send the email
     smtp_server = 'smtp-mail.outlook.com'
     smtp_port = 587
-    smtp_username = 'atendimentoeficaz@eficazcob.com.br'
-    smtp_password = 'AAaa22**'
+    smtp_username = ''
+    smtp_password = ''
     smtp_tls = True
 
     with smtplib.SMTP(smtp_server, smtp_port) as smtp:
@@ -65,10 +64,10 @@ CHIPEIRAS REBOOTADAS!!!!!.
 
 
 def emailInsusesso():
-    sender_email = "atendimentoeficaz@eficazcob.com.br"
-    receiver_email = "equipecpd@eficazcob.com.br"
-    password = "AAaa22**"
-    message = "Subject: Erro BB-8\n\nEncontrei uma excecao, F no chat :("
+    sender_email = ""
+    receiver_email = ""
+    password = ""
+    message = ""
 
     server = smtplib.SMTP("smtp-mail.outlook.com", 587)
     server.starttls()
